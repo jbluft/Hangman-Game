@@ -1,4 +1,4 @@
-var computerChoices = ["beagle", "pug", "corgi", "poodle"];
+var computerChoices = ["beagle", "corgi", "poodle", "shitzu", "pug", "husky"];
 
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
@@ -17,7 +17,6 @@ for (i = 0; i < computerGuess.length; i++) {
 
 function initGame() {
     computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-        // console.log(computerGuess);
 	for (i = 0; i < computerGuess.length; i++) {
         underscores[i] = "_";
         }
@@ -53,7 +52,6 @@ document.onkeyup = function(event) {
 
 					if ((underscores.join("") === computerGuess)) {
 					wins++;
-					// console.log(wins);
 					clear();
 					initGame()
 					document.getElementById('wins').innerHTML = wins;
